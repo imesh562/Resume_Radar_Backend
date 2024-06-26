@@ -1,8 +1,9 @@
 from flask import Blueprint, request, jsonify
 from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity, get_jwt
-from ..models.models import User, TokenBlacklist
-from ..extensions import db
 from werkzeug.security import generate_password_hash, check_password_hash
+
+from ..extensions import db
+from ..models.models import User, TokenBlacklist
 
 auth_bp = Blueprint('auth', __name__)
 
@@ -55,7 +56,7 @@ def logout():
     return jsonify({"success": True, "message": "User logged out", "data": None, }), 200
 
 
-@auth_bp.route('/auth', methods=['GET'])
+@auth_bp.route('/userData', methods=['GET'])
 @jwt_required()
 def protected():
     current_user = get_jwt_identity()

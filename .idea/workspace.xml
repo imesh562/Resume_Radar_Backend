@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e297c006-d2e8-4287-8cf2-a0fe6873ba36" name="Changes" comment="Completed initial configurations &amp; pre login API's(Require minor fixes).">
+    <list default="true" id="e297c006-d2e8-4287-8cf2-a0fe6873ba36" name="Changes" comment="Fixed issues with OTP and Session API's.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/auth_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/auth_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/controllers/otp_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/otp_controller.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/extensions.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/extensions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -123,7 +118,8 @@
       <updated>1719233134700</updated>
       <workItem from="1719233143320" duration="4543000" />
       <workItem from="1719337350130" duration="7245000" />
-      <workItem from="1719419138568" duration="7111000" />
+      <workItem from="1719419138568" duration="7272000" />
+      <workItem from="1719516163876" duration="574000" />
     </task>
     <task id="LOCAL-00001" summary="Completed initial configurations &amp; pre login API's(Require minor fixes).">
       <option name="closed" value="true" />
@@ -141,7 +137,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719348116386</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Fixed issues with OTP and Session API's.">
+      <option name="closed" value="true" />
+      <created>1719427921377</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1719427921377</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -152,7 +156,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Completed initial configurations &amp; pre login API's(Require minor fixes)." />
-    <option name="LAST_COMMIT_MESSAGE" value="Completed initial configurations &amp; pre login API's(Require minor fixes)." />
+    <MESSAGE value="Fixed issues with OTP and Session API's." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed issues with OTP and Session API's." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Resume_Radar_Backend$Flask__run_py_.coverage" NAME="Flask (run.py) Coverage Results" MODIFIED="1719347496044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />

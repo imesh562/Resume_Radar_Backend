@@ -12,6 +12,8 @@ class TokenBlacklist(db.Model):
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(120), unique=True, nullable=False)
+    first_name = db.Column(db.String(60), nullable=False)
+    last_name = db.Column(db.String(60), nullable=False)
     password_hash = db.Column(db.String(128), nullable=False)
     registered_on = db.Column(db.DateTime, nullable=False, default=datetime.utcnow)
 

@@ -13,11 +13,14 @@ def register():
     data = request.get_json()
     email = data.get('email')
     password = data.get('password')
+    first_name = data.get('firstName')
+    last_name = data.get('lastName')
 
     if User.query.filter_by(email=email).first():
         return jsonify({"success": False, "message": "Email already registered", "data": None, }), 200
 
-    new_user = User(email=email, password_hash=generate_password_hash(password))
+    new_user = User(email=email, password_hash=generate_password_hash(password), first_name=first_name,
+                    last_name=last_name)
     db.session.add(new_user)
     db.session.commit()
 
@@ -33,7 +36,8 @@ def login():
     user = User.query.filter_by(email=email).first()
 
     if user and check_password_hash(user.password_hash, password):
-        access_token = create_access_token(identity={'email': email, 'user_id': user.id})
+        access_token = create_access_token(
+            identity={'email': email, 'user_id': user.id, 'first_name': user.first_name, 'last_name': user.last_name})
         return jsonify({
             "success": True,
             "message": "User logged in successfully",
@@ -41,6 +45,8 @@ def login():
                 'token': access_token,
                 'email': email,
                 'user_id': user.id,
+                'first_name': user.first_name,
+                'last_name': user.last_name,
             }
         }), 200
 

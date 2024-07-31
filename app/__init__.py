@@ -47,8 +47,10 @@ def create_app():
             return token is not None
 
         from .controllers import auth_bp
+        from .controllers import otp_bp
 
         app.register_blueprint(auth_bp)
+        app.register_blueprint(otp_bp)
 
         db.create_all()
 

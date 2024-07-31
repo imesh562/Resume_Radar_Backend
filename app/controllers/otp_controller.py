@@ -19,9 +19,9 @@ def check_email():
     user = User.query.filter_by(email=email).first()
 
     if user:
-        return jsonify({"success": True, "message": "Email is registered", "data": None, }), 200
+        return jsonify({"success": False, "message": "Email is registered", "data": None, }), 200
     else:
-        return jsonify({"success": False, "message": "Email is not registered", "data": None, }), 200
+        return jsonify({"success": True, "message": "Email is not registered", "data": None, }), 200
 
 
 @otp_bp.route('/send_otp', methods=['POST'])
@@ -35,7 +35,7 @@ def send_otp():
             "success": False,
             "message": f"You have to wait {int(time_remaining / 60)} minutes before requesting another OTP",
             "data": None
-        }), 429
+        }), 200
 
     otp_code = random.randint(100000, 999999)
 

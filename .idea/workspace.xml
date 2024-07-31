@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e297c006-d2e8-4287-8cf2-a0fe6873ba36" name="Changes" comment="Fixed issues with OTP and Session API's.">
+    <list default="true" id="e297c006-d2e8-4287-8cf2-a0fe6873ba36" name="Changes" comment="Completed the registration process.">
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/controllers/auth_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/auth_controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/controllers/otp_controller.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/controllers/otp_controller.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/models/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/models/models.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -20,6 +23,17 @@
         <option value="Flask Main" />
         <option value="Python Script" />
       </list>
+    </option>
+  </component>
+  <component name="FlaskConsoleOptions" custom-start-script="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))">
+    <envs>
+      <env key="FLASK_APP" value="app" />
+    </envs>
+    <option name="myCustomStartScript" value="import sys&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;from flask.cli import ScriptInfo&#10;locals().update(ScriptInfo(create_app=None).load_app().make_shell_context())&#10;print(&quot;Python %s on %s\nApp: %s [%s]\nInstance: %s&quot; % (sys.version, sys.platform, app.import_name, app.env, app.instance_path))" />
+    <option name="myEnvs">
+      <map>
+        <entry key="FLASK_APP" value="app" />
+      </map>
     </option>
   </component>
   <component name="Git.Settings">
@@ -119,7 +133,10 @@
       <workItem from="1719233143320" duration="4543000" />
       <workItem from="1719337350130" duration="7245000" />
       <workItem from="1719419138568" duration="7272000" />
-      <workItem from="1719516163876" duration="574000" />
+      <workItem from="1719516163876" duration="797000" />
+      <workItem from="1719517694109" duration="1124000" />
+      <workItem from="1722378420159" duration="6079000" />
+      <workItem from="1722428124270" duration="11152000" />
     </task>
     <task id="LOCAL-00001" summary="Completed initial configurations &amp; pre login API's(Require minor fixes).">
       <option name="closed" value="true" />
@@ -145,7 +162,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719427921377</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Completed the registration process.">
+      <option name="closed" value="true" />
+      <created>1719516938339</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719516938339</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -157,10 +182,11 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Completed initial configurations &amp; pre login API's(Require minor fixes)." />
     <MESSAGE value="Fixed issues with OTP and Session API's." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed issues with OTP and Session API's." />
+    <MESSAGE value="Completed the registration process." />
+    <option name="LAST_COMMIT_MESSAGE" value="Completed the registration process." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Resume_Radar_Backend$Flask__run_py_.coverage" NAME="Flask (run.py) Coverage Results" MODIFIED="1719347496044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/Resume_Radar_Backend$Resume_Radar_Backend.coverage" NAME="Resume_Radar_Backend Coverage Results" MODIFIED="1719427774009" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Resume_Radar_Backend$Flask__run_py_.coverage" NAME="Flask (run.py) Coverage Results" MODIFIED="1722379014172" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/Resume_Radar_Backend$Resume_Radar_Backend.coverage" NAME="Resume_Radar_Backend Coverage Results" MODIFIED="1722440507545" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -71,5 +71,7 @@ def protected():
                     "data": {
                         'email': current_user['email'],
                         'user_id': current_user['user_id'],
+                        'first_name': current_user['first_name'],
+                        'last_name': current_user['last_name'],
                     }
                     }), 200

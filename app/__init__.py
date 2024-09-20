@@ -1,8 +1,6 @@
 from flask import Flask, jsonify
-
 from .config import Config
 from .extensions import db, migrate, jwt, mail
-
 
 def create_app():
     app = Flask(__name__)
@@ -46,11 +44,11 @@ def create_app():
             token = TokenBlacklist.query.filter_by(jti=jti).first()
             return token is not None
 
-        from .controllers import auth_bp
-        from .controllers import otp_bp
+        from .controllers import auth_bp, otp_bp, quiz_bp
 
         app.register_blueprint(auth_bp)
         app.register_blueprint(otp_bp)
+        app.register_blueprint(quiz_bp)
 
         db.create_all()
 
